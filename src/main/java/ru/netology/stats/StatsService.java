@@ -1,21 +1,21 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public int salesAmount(int[] arraySalesAmount) {
-        int sumSalesAmount = 0;
+    public long salesAmount(long[] arraySalesAmount) {
+        long sumSalesAmount = 0;
 
-        for (int sum : arraySalesAmount) {
+        for (long sum : arraySalesAmount) {
             sumSalesAmount = sumSalesAmount + sum;
         }
 
         return sumSalesAmount;
     }
 
-    public int averageSalesAmount(int[] arraySalesAmount) {
+    public long averageSalesAmount(long[] arraySalesAmount) {
         return salesAmount(arraySalesAmount) / arraySalesAmount.length;
     }
 
-    public int maxSalesMonth(int[] arraySalesAmount) {
+    public int maxSalesMonth(long[] arraySalesAmount) {
         int maxMonth = 0;
 
         for (int i = 0; i < arraySalesAmount.length; i++) {
@@ -27,7 +27,7 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int minSalesMonth(int[] arraySalesAmount) {
+    public int minSalesMonth(long[] arraySalesAmount) {
         int minMonth = 0;
 
         for (int i = 0; i < arraySalesAmount.length; i++) {
@@ -39,11 +39,11 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int countMonthBelowAverageSales(int[] arraySalesAmount) {
-        int averageSaleAmount = averageSalesAmount(arraySalesAmount);
+    public int countMonthBelowAverageSales(long[] arraySalesAmount) {
+        long averageSaleAmount = averageSalesAmount(arraySalesAmount);
         int countMonth = 0;
 
-        for (int sale : arraySalesAmount) {
+        for (long sale : arraySalesAmount) {
             if (sale < averageSaleAmount) {
                 countMonth++;
             }
@@ -52,11 +52,11 @@ public class StatsService {
         return countMonth;
     }
 
-    public int countMonthAboveAverageSales(int[] arraySalesAmount) {
-        int averageSaleAmount = averageSalesAmount(arraySalesAmount);
+    public int countMonthAboveAverageSales(long[] arraySalesAmount) {
+        long averageSaleAmount = averageSalesAmount(arraySalesAmount);
         int countMonth = 0;
 
-        for (int sale : arraySalesAmount) {
+        for (long sale : arraySalesAmount) {
             if (sale > averageSaleAmount) {
                 countMonth++;
             }

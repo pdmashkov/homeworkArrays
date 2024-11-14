@@ -8,10 +8,10 @@ public class StatsServiceTest {
     public void salesAmountTest() {
         StatsService service = new StatsService();
 
-        int[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 180;
-        int actual = service.salesAmount(arraySalesAmount);
+        long actual = service.salesAmount(arraySalesAmount);
 
         /* Не совсем понял из условия задания каким должен быть автотест, то есть сравнивать ожидаемый результат с актуальным
         или просто выводить сумму всех продаж, поэтому оставил оба варианта */
@@ -25,10 +25,10 @@ public class StatsServiceTest {
     public void averageSalesAmountTest() {
         StatsService service = new StatsService();
 
-        int[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 15;
-        int actual = service.averageSalesAmount(arraySalesAmount);
+        long actual = service.averageSalesAmount(arraySalesAmount);
 
         Assertions.assertEquals(expected, actual);
 
@@ -39,7 +39,7 @@ public class StatsServiceTest {
     public void maxSalesMonthTest() {
         StatsService service = new StatsService();
 
-        int[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 8;
         int actual = service.maxSalesMonth(arraySalesAmount);
@@ -55,7 +55,7 @@ public class StatsServiceTest {
     public void minSalesMonthTest() {
         StatsService service = new StatsService();
 
-        int[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 9;
         int actual = service.minSalesMonth(arraySalesAmount);
@@ -69,7 +69,7 @@ public class StatsServiceTest {
     public void countMonthBelowAverageSalesTest() {
         StatsService service = new StatsService();
 
-        int[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 5;
         int actual = service.countMonthBelowAverageSales(arraySalesAmount);
@@ -83,7 +83,7 @@ public class StatsServiceTest {
     public void countMonthAboveAverageSalesTest() {
         StatsService service = new StatsService();
 
-        int[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arraySalesAmount = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 5;
         int actual = service.countMonthAboveAverageSales(arraySalesAmount);
